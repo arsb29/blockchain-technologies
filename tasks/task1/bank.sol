@@ -18,7 +18,7 @@ contract Bank {
         owner = msg.sender; // also the address for the fee
     }
 
-    function setFee(uint _fee) external {
+    function setFee(uint _fee) external onlyOwner {
         fee = _fee;
     }
 
